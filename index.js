@@ -3,12 +3,15 @@ var express = require('express'),
     ptBible = require('bible-portuguese');
 
 app.get('/', function(req, res){
-    // res.status(200).send("<h1>Hello World</h1>");
-    ptBible.getVerse("John 3:16", function(err, data){
-    	res.status(200).send(
-    		"<h2>" + data.text + "</h2>"
-    	);
-    });
+    res.status(200).send("<h1>Página Inicial</h1>");
+});
+
+app.get('/:book/:chapter/:verse', function(req, res){
+	var query = req.params.book + " " + req.params.chapter + ":" + req.params.verse;
+	ptBible.getVerse(query, function(err, data){
+		res.status(200).send("<h2>" + data.text + "</h2>");
+	});
+
 });
 
 app.get('*', function(req, res){
