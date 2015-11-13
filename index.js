@@ -4,9 +4,10 @@ var express = require('express'),
 
 app.get('/', function(req, res){
     // res.status(200).send("<h1>Hello World</h1>");
-    ptBible.getVerse("Mateus 1:1", function(err, data){
-    	if (err) throw err;
-    	console.log(data);
+    ptBible.getVerse("John 3:16", function(err, data){
+    	res.status(200).send(
+    		"<h2>" + data.text + "</h2>"
+    	);
     });
 });
 
