@@ -1,0 +1,22 @@
+{
+  "name": "express-boilerplate",
+  "version": "1.0.0",
+  "description": "A simple workflow for express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasmaiaesilva/express-boilerplate.git"
+  },
+  "author": "Lucas Maia e Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasmaiaesilva/express-boilerplate/issues"
+  },
+  "homepage": "https://github.com/lucasmaiaesilva/express-boilerplate",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
