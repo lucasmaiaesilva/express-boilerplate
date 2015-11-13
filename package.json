@@ -18,5 +18,8 @@
   "homepage": "https://github.com/lucasmaiaesilva/express-boilerplate",
   "dependencies": {
     "express": "^4.13.3"
+  },
+  "engines": {
+    "node": "4.1.1"
   }
 }

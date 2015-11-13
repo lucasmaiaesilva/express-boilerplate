@@ -2,13 +2,15 @@ var express = require('express'),
     app = express();
 
 app.get('/', function(req, res){
-    res.send('Hello World');
+    res.status(200).send("Hello World");
 });
 
 app.get('*', function(req, res){
-    res.send('Page Not Found', 404);
+    res.status(404).send("Page not Found");
 });
 
-app.listen(8080);
-console.log('Express server started on port 8080');
+var port = Number(process.env.PORT || 3000);
+
+app.listen(port);
+console.log('Express server started on port ' + port);
 
