@@ -2,11 +2,11 @@ var express = require('express'),
     app = express();
 
 app.get('/', function(req, res){
-    res.status(200).send("Hello World");
+    res.status(200).send("<h1>Hello World</h1>");
 });
 
 app.get('*', function(req, res){
-    res.status(404).send("Page not Found");
+    res.status(404).send("<h1>Page not Found</h1>");
 });
 
 var port = Number(process.env.PORT || 3000);
