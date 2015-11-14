@@ -3,13 +3,14 @@ var express = require('express'),
     ptBible = require('bible-portuguese');
 
 app.get('/', function(req, res){
-    res.status(200).send("<h1>Página Inicial</h1>");
+    res.status(200).json("Página Inicial");
 });
 
 app.get('/:book/:chapter/:verse', function(req, res){
 	var query = req.params.book + " " + req.params.chapter + ":" + req.params.verse;
 	ptBible.getVerse(query, function(err, data){
-		res.status(200).send("<h2>" + data.text + "</h2>");
+		if (err) throw err;
+		res.status(200).json(data);
 	});
 
 });
